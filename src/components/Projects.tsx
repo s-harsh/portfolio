@@ -79,6 +79,30 @@ const projects = [
       "Non-intrusive integration into existing PR workflow",
     ],
   },
+  {
+    id: "url-shortener",
+    number: "04",
+    title: "URL Shortener",
+    subtitle: "Production-Grade Link Shortener",
+    tagline: "Sub-5ms redirects. 3.5T codes. Three.js 3D homepage.",
+    tech: ["Spring Boot 3", "Java 21", "Redis", "PostgreSQL", "Three.js", "Docker"],
+    accent: "#38bdf8",
+    liveLink: null,
+    githubLink: "https://github.com/s-harsh/url-shortener",
+    metrics: [
+      { label: "Redirect latency", value: "<5ms" },
+      { label: "Unique codes", value: "3.5T" },
+      { label: "Cache strategy", value: "L1 Redis" },
+    ],
+    problem: "Building a URL shortener sounds simple — until you need sub-millisecond redirects at scale without hitting the database on every request, while tracking click analytics without adding any latency to the user.",
+    solution: "Two-level cache architecture: Redis L1 serves redirects in under 5ms via write-through caching. Atomic Redis INCR + Base62 encoding generates collision-free 7-char codes. Analytics are fully @Async — they never touch the redirect path. A Three.js boid fish simulation with 120 flocking fish powers the homepage.",
+    architecture: "POST /shorten → Redis INCR → Base62 → PostgreSQL + Redis\nGET /{code}  → Redis HIT  → 302 redirect  (<5ms)\n             → Redis MISS → PostgreSQL → cache → redirect\nAnalytics    → @Async thread → click_events INSERT",
+    challenges: [
+      "Ensuring Redis outages never break redirects — full graceful degradation to PostgreSQL",
+      "Async analytics that add zero latency to the hot redirect path using Spring @Async",
+      "Three.js boid flocking AI for 120 fish with real-time 60fps browser performance",
+    ],
+  },
 ];
 
 function TiltCard({ project, index }: { project: typeof projects[0]; index: number }) {
