@@ -62,7 +62,7 @@ export default function Achievements() {
               transition={{ duration: 0.5, delay: i * 0.07 }}
               className="group p-6 rounded-2xl border border-white/[0.06] bg-white/[0.02] hover:bg-white/[0.04] hover:border-white/10 transition-all duration-300"
             >
-              <div className="text-2xl mb-4 select-none">{icon}</div>
+              <div className="text-2xl mb-4 select-none" aria-hidden="true">{icon}</div>
               <div className="text-3xl font-black text-white mb-1 tracking-tight">{value}</div>
               <div className="text-sm font-semibold text-slate-300 mb-2">{label}</div>
               <p className="text-xs text-slate-600 leading-relaxed group-hover:text-slate-500 transition-colors">{description}</p>

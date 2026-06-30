@@ -158,18 +158,20 @@ export default function Hero() {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={label}
                 className="w-9 h-9 rounded-xl border border-white/10 flex items-center justify-center text-slate-500 hover:text-white hover:border-white/25 transition-all duration-200"
               >
-                <Icon className="w-4 h-4" />
+                <Icon className="w-4 h-4" aria-hidden="true" />
               </a>
             ))}
             <div className="w-px h-5 bg-white/10" />
             <a
               href="/resume.pdf"
               download
+              aria-label="Download resume PDF"
               className="flex items-center gap-1.5 text-sm text-slate-500 hover:text-white transition-colors font-medium"
             >
-              <ExternalLink className="w-3.5 h-3.5" />
+              <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />
               Resume
             </a>
           </motion.div>
@@ -205,8 +207,9 @@ export default function Hero() {
         <motion.div
           animate={{ y: [0, 6, 0] }}
           transition={{ repeat: Infinity, duration: 1.6, ease: "easeInOut" }}
+          aria-hidden="true"
         >
-          <ArrowDown className="w-4 h-4 text-slate-600" />
+          <ArrowDown className="w-4 h-4 text-slate-600" aria-hidden="true" />
         </motion.div>
       </motion.div>
     </section>

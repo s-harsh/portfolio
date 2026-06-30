@@ -68,14 +68,16 @@ function JobCard({ job, index, isLast }: { job: Job; index: number; isLast: bool
               href={job.url}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={`${job.company} website`}
               className="text-white font-black text-xl tracking-tight hover:text-[#4f8eff] transition-colors inline-flex items-center gap-1"
             >
               {job.company}
-              <ArrowUpRight className="w-4 h-4 opacity-40" />
+              <ArrowUpRight className="w-4 h-4 opacity-40" aria-hidden="true" />
             </a>
             {job.current && (
               <span className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" aria-hidden="true" />
+                <span className="sr-only">Current position</span>
                 Now
               </span>
             )}

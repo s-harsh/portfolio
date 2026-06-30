@@ -159,18 +159,20 @@ function TiltCard({ project, index }: { project: typeof projects[0]; index: numb
                 href={project.githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`${project.title} GitHub repository`}
                 className="w-8 h-8 rounded-lg border border-white/10 flex items-center justify-center text-slate-500 hover:text-white hover:border-white/20 transition-all"
               >
-                <GithubIcon className="w-3.5 h-3.5" />
+                <GithubIcon className="w-3.5 h-3.5" aria-hidden="true" />
               </a>
               {project.liveLink && (
                 <a
                   href={project.liveLink}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`${project.title} live demo`}
                   className="w-8 h-8 rounded-lg border border-white/10 flex items-center justify-center text-slate-500 hover:text-white hover:border-white/20 transition-all"
                 >
-                  <ExternalLink className="w-3.5 h-3.5" />
+                  <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />
                 </a>
               )}
             </div>
@@ -304,11 +306,12 @@ export default function Projects() {
             href="https://github.com/s-harsh"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="View all projects on GitHub"
             className="inline-flex items-center gap-2 text-slate-500 hover:text-white text-sm font-mono transition-colors"
           >
-            <GithubIcon className="w-4 h-4" />
+            <GithubIcon className="w-4 h-4" aria-hidden="true" />
             github.com/s-harsh
-            <ExternalLink className="w-3 h-3 opacity-50" />
+            <ExternalLink className="w-3 h-3 opacity-50" aria-hidden="true" />
           </a>
         </motion.div>
       </div>
