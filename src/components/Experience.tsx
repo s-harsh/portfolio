@@ -15,13 +15,13 @@ const jobs = [
     current: true,
     url: "https://miniorange.com",
     highlights: [
-      { metric: "First-of-its-kind", text: "Designed Multi-Active Directory support enabling enterprises to manage identities across multiple AD instances — unblocked large enterprise onboarding." },
-      { metric: "30h+/month", text: "Led Privacy Compliance Suite for Drupal (GDPR/HIPAA/DPDP) — automated consent management and user data rights workflows." },
-      { metric: "30% faster", text: "Optimized LDAP authentication via query optimization and connection pooling, delivering measurable latency reduction for enterprise clients." },
-      { metric: "Production AI", text: "Built RAG-based PR review pipeline — analyzes Git diffs for security risks and code quality issues before merge." },
-      { metric: "Zero drift", text: "Established Docker-based development environments that eliminated the 'works on my machine' problem across the engineering team." },
+      { metric: "20+ releases", text: "Took end-to-end ownership of an enterprise authentication platform — LDAP, 2FA, Session Management, and Privacy Compliance — shipping 20+ production releases and closing 131+ issues across 2 performance cycles." },
+      { metric: "Architected", text: "Launched Privacy Compliance Suite from scratch (GDPR, DPDP Act 2023, HIPAA, CCPA) with consent management, user rights workflows, audit logging, breach notification, and data mapping." },
+      { metric: "30% faster", text: "Diagnosed and resolved critical production issues end-to-end including NTLM Windows Authentication integration via LDAP — eliminating 90% of legacy auth vulnerabilities and boosting authentication performance by 30%." },
+      { metric: "CI quality", text: "Introduced Playwright JS E2E automation framework and CI quality gates, establishing consistent automated checks across all production releases and improving release reliability." },
+      { metric: "Production AI", text: "Built RAG-based PR review pipeline and AI-assisted release workflows that run on every authentication module PR, catching security risks before human review." },
     ],
-    tech: ["Java", "PHP", "LDAP", "NTLM", "SSO", "Spring Boot", "Docker", "RAG", "Drupal", "Joomla"],
+    tech: ["Java", "PHP", "JavaScript", "LDAP", "NTLM", "OAuth 2.0", "SAML", "2FA", "Spring Boot", "Docker", "Playwright", "CI/CD", "RAG"],
   },
   {
     company: "Celebal Technology",
@@ -177,10 +177,10 @@ export default function Experience() {
                 <p className="text-[#ffd166] text-xs font-mono uppercase tracking-widest mb-5">Impact</p>
                 <div className="space-y-4">
                   {[
-                    { n: "1st", label: "Multi-AD feature ever built" },
-                    { n: "30%", label: "LDAP perf improvement" },
-                    { n: "30h+", label: "Compliance automated/month" },
-                    { n: "100%", label: "Features owned end-to-end" },
+                    { n: "20+", label: "Production releases shipped" },
+                    { n: "131+", label: "Issues resolved" },
+                    { n: "30%", label: "Auth performance boost" },
+                    { n: "90%", label: "Vulnerabilities eliminated" },
                   ].map(({ n, label }) => (
                     <div key={label} className="flex items-center justify-between">
                       <span className="text-slate-500 text-xs">{label}</span>

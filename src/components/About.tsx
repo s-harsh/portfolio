@@ -125,7 +125,7 @@ export default function About() {
                   <span className="text-slate-400 text-sm font-medium">Currently open to</span>
                 </div>
                 <p className="text-slate-600 text-sm pl-4">
-                  SDE-2 roles in distributed systems, large-scale API design, or identity/security infrastructure.
+                  SDE-1 & SDE-2 backend roles in distributed systems, API design, or identity/security infrastructure.
                 </p>
               </div>
             </FadeIn>

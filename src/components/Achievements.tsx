@@ -5,12 +5,12 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 
 const highlights = [
-  { icon: "⚡", value: "30%", label: "LDAP auth speedup", description: "Via query optimization and connection pooling at miniOrange." },
-  { icon: "🔐", value: "#1", label: "First Multi-AD feature", description: "Designed first-of-its-kind Multi-AD support that unblocked large enterprise onboarding." },
-  { icon: "🤖", value: "Live", label: "AI in production", description: "RAG-based PR reviewer runs on every authentication module PR." },
-  { icon: "📋", value: "30h+", label: "Automated per month", description: "GDPR/HIPAA/DPDP compliance suite removes 30+ hours of manual work monthly." },
-  { icon: "🛡️", value: "40%", label: "Security review saved", description: "SecureScan reduced manual security review effort by 40%." },
-  { icon: "📦", value: "96%", label: "Payload reduction", description: "MAB Jewels initial page load cut by 96% through code-split pagination." },
+  { icon: "🚀", value: "20+", label: "Production releases", description: "Shipped across enterprise authentication and compliance platforms across 2 performance cycles." },
+  { icon: "🐛", value: "131+", label: "Issues resolved", description: "Closed across Drupal and Joomla platforms, plus 10 on-demand enterprise customer releases." },
+  { icon: "⚡", value: "30%", label: "Auth performance boost", description: "Via LDAP optimization, MVC refactoring, and high-performance API layer redesign." },
+  { icon: "🛡️", value: "90%", label: "Vulnerabilities eliminated", description: "Legacy auth vulnerabilities removed through NTLM integration and security hardening." },
+  { icon: "🤖", value: "Live", label: "AI in production", description: "RAG-based PR reviewer runs on every authentication module PR at miniOrange." },
+  { icon: "🔍", value: "40%", label: "Security review saved", description: "SecureScan reduced manual security review effort by 40% with AI-driven OWASP detection." },
 ];
 
 const certifications = [

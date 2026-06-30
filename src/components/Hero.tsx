@@ -114,9 +114,9 @@ export default function Hero() {
             transition={{ delay: 0.55, duration: 0.7 }}
             className="text-slate-400 text-base leading-relaxed max-w-xl mb-10"
           >
-            I design authentication infrastructure enterprises run on —{" "}
-            <span className="text-white">Multi-AD systems</span>, LDAP/NTLM engines, and
-            {" "}<span className="text-white">AI-powered developer tooling</span> that ships to production and stays there.
+            I architect authentication infrastructure enterprises run on —{" "}
+            <span className="text-white">LDAP, 2FA, Session Management</span>, and
+            {" "}<span className="text-white">privacy compliance platforms</span> that ship to production and stay there. Based in Pune, India.
           </motion.p>
 
           {/* CTA row */}
@@ -183,8 +183,8 @@ export default function Hero() {
           className="absolute bottom-16 right-6 hidden lg:flex flex-col gap-5"
         >
           {[
+            { value: "20+", label: "Prod releases" },
             { value: "30%", label: "Auth speedup" },
-            { value: "30h+", label: "Automated/month" },
             { value: "600+", label: "DSA solved" },
           ].map(({ value, label }) => (
             <div key={label} className="text-right">

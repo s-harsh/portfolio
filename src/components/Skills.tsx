@@ -5,25 +5,25 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 
 const row1 = [
-  "Java", "Spring Boot", "Node.js", "Python", "Express.js",
-  "REST APIs", "Microservices", "LDAP", "NTLM", "SSO", "Active Directory",
+  "Java", "Spring Boot", "Node.js", "Python", "PHP", "Express.js",
+  "REST API Design", "Microservices", "Distributed Systems", "System Design", "Performance Optimization",
 ];
 const row2 = [
-  "React.js", "Next.js", "TypeScript", "Docker", "AWS EC2", "AWS S3",
-  "PostgreSQL", "MongoDB", "MySQL", "GitHub Actions", "Jenkins", "CI/CD",
+  "LDAP", "NTLM", "OAuth 2.0", "SAML", "2FA", "Session Management", "CSRF/XSS Prevention",
+  "React.js", "Next.js", "TypeScript", "Docker", "AWS", "Redis", "CI/CD",
 ];
 const row3 = [
-  "RAG Pipelines", "LLM Integration", "OWASP", "GDPR", "HIPAA", "DPDP",
-  "Playwright", "System Design", "Agile", "Code Review", "Framer Motion",
+  "LLMs", "RAG Pipelines", "OpenAI APIs", "OWASP", "GDPR", "HIPAA", "CCPA", "DPDP Act 2023",
+  "Playwright", "Quality Gates", "GitHub Actions", "Jenkins", "Agile",
 ];
 
 const categories = [
-  { label: "Backend", skills: ["Java", "Spring Boot", "Node.js", "Python", "REST APIs", "Microservices"], color: "bg-blue-500/10 border-blue-500/20 text-blue-300" },
-  { label: "Auth & Security", skills: ["LDAP", "NTLM", "SSO", "Active Directory", "OWASP", "GDPR", "HIPAA", "DPDP"], color: "bg-red-500/10 border-red-500/20 text-red-300" },
-  { label: "AI & Tools", skills: ["RAG Pipelines", "LLM Integration", "Vector DB", "AI Code Review"], color: "bg-violet-500/10 border-violet-500/20 text-violet-300" },
+  { label: "Backend", skills: ["Java", "Spring Boot", "Node.js", "Python", "PHP", "REST API Design", "Microservices", "Distributed Systems"], color: "bg-blue-500/10 border-blue-500/20 text-blue-300" },
+  { label: "Auth & Security", skills: ["LDAP", "NTLM", "OAuth 2.0", "SAML", "2FA", "Session Management", "CSRF/XSS Prevention", "OWASP"], color: "bg-red-500/10 border-red-500/20 text-red-300" },
+  { label: "AI & Tooling", skills: ["LLMs", "RAG Pipelines", "OpenAI APIs", "AI-assisted Workflows"], color: "bg-violet-500/10 border-violet-500/20 text-violet-300" },
   { label: "Frontend", skills: ["React.js", "Next.js", "TypeScript", "Tailwind CSS"], color: "bg-cyan-500/10 border-cyan-500/20 text-cyan-300" },
-  { label: "Cloud & DevOps", skills: ["Docker", "AWS", "GitHub Actions", "Jenkins", "CI/CD"], color: "bg-emerald-500/10 border-emerald-500/20 text-emerald-300" },
-  { label: "Databases", skills: ["PostgreSQL", "MongoDB", "MySQL"], color: "bg-amber-500/10 border-amber-500/20 text-amber-300" },
+  { label: "Cloud & DevOps", skills: ["AWS", "Docker", "GitHub Actions", "Jenkins", "CI/CD", "Playwright", "Quality Gates"], color: "bg-emerald-500/10 border-emerald-500/20 text-emerald-300" },
+  { label: "Databases", skills: ["MySQL", "MongoDB", "PostgreSQL", "Redis"], color: "bg-amber-500/10 border-amber-500/20 text-amber-300" },
 ];
 
 function MarqueeRow({ items, reverse = false }: { items: string[]; reverse?: boolean }) {

@@ -16,13 +16,15 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://harshvardhan-portfolio-two.vercel.app"),
-  title: "Harshvardhan Soni — Backend Engineer | Java · Spring Boot · Auth Systems · AI",
+  title: "Harshvardhan Soni — Backend Software Engineer | Pune | Java · Auth Systems · AI",
   description:
-    "Backend Software Engineer specializing in authentication systems (LDAP, NTLM, SSO), distributed systems, and AI-powered developer tools. Open to SDE-2 backend roles at top tech companies.",
+    "Harshvardhan Soni — Backend Software Engineer in Pune, India. 2+ years shipping enterprise authentication systems (LDAP, NTLM, OAuth 2.0, SAML), privacy compliance platforms, and AI-powered tooling. Open to SDE-1 & SDE-2 backend roles at top tech companies.",
   keywords: [
-    "Backend Engineer", "Software Engineer", "Java Developer", "Spring Boot",
-    "Authentication Systems", "LDAP", "NTLM", "SSO", "System Design",
-    "AI Engineer", "Full Stack Developer", "Harshvardhan Soni", "miniOrange",
+    "Harshvardhan Soni", "Software Engineer Pune", "SDE Pune", "Backend Engineer Pune",
+    "Java Developer Pune", "Backend Engineer", "Software Engineer", "Java Developer",
+    "Spring Boot", "Authentication Systems", "LDAP", "NTLM", "OAuth 2.0", "SAML",
+    "IAM Engineer", "Identity Access Management", "System Design", "AI Engineer",
+    "Privacy Compliance", "GDPR", "miniOrange", "Harshvardhan",
   ],
   authors: [{ name: "Harshvardhan Soni", url: "https://linkedin.com/in/harshvardhansonihv" }],
   creator: "Harshvardhan Soni",

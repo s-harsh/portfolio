@@ -39,7 +39,7 @@ const projects = [
     tagline: "8+ OWASP types. 40% less review effort. AI-driven fixes.",
     tech: ["Next.js", "Express.js", "TypeScript", "Tailwind", "LLM"],
     accent: "#4f8eff",
-    liveLink: "#",
+    liveLink: "https://ai-security-scanner1.vercel.app/",
     githubLink: "https://github.com/s-harsh",
     metrics: [
       { label: "OWASP types detected", value: "8+" },
@@ -95,12 +95,12 @@ const projects = [
       { label: "Cache strategy", value: "L1 Redis" },
     ],
     problem: "Building a URL shortener sounds simple — until you need sub-millisecond redirects at scale without hitting the database on every request, while tracking click analytics without adding any latency to the user.",
-    solution: "Two-level cache architecture: Redis L1 serves redirects in under 5ms via write-through caching. Atomic Redis INCR + Base62 encoding generates collision-free 7-char codes. Analytics are fully @Async — they never touch the redirect path. A Three.js boid fish simulation with 120 flocking fish powers the homepage.",
-    architecture: "POST /shorten → Redis INCR → Base62 → PostgreSQL + Redis\nGET /{code}  → Redis HIT  → 302 redirect  (<5ms)\n             → Redis MISS → PostgreSQL → cache → redirect\nAnalytics    → @Async thread → click_events INSERT",
+    solution: "Constructed high-throughput REST APIs with Redis-backed caching for sub-millisecond redirect performance. Enforced JWT-based authentication, rate limiting, and abuse-prevention middleware. Instrumented an analytics pipeline tracking clicks, referrer data, and geographic distribution via a real-time dashboard.",
+    architecture: "POST /shorten → validation → custom slug / Base62 → MongoDB + Redis\nGET /{code}  → Redis HIT  → 302 redirect  (<5ms)\n             → Redis MISS → MongoDB → cache → redirect\nAnalytics    → async pipeline → click_events → dashboard",
     challenges: [
-      "Ensuring Redis outages never break redirects — full graceful degradation to PostgreSQL",
-      "Async analytics that add zero latency to the hot redirect path using Spring @Async",
-      "Three.js boid flocking AI for 120 fish with real-time 60fps browser performance",
+      "Ensuring Redis outages never break redirects — graceful degradation to MongoDB",
+      "Async analytics that add zero latency to the hot redirect path",
+      "JWT auth + rate limiting protecting endpoints under concurrent load",
     ],
   },
 ];
